@@ -1,0 +1,15 @@
+h1 {
+  margin: 5px 5px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: lightblue;
+  border-color: black;
+  border-width: 2px;
+}
+
+form {
+  margin-bottom: 5px;
+}

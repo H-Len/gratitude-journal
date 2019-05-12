@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  $("#loadJournal").click(function(event) {
+    console.log("smile");
+    $("#journal").toggle();
+  });
+
   $("form#greatful-1").submit(function(event) {
     console.log("I'm here");
     var someInput1 = $("input#gratitude-1").val();

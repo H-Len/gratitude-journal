@@ -4,10 +4,27 @@ h1 {
   text-decoration: underline;
 }
 
+#journal {
+  display: none;
+}
+
 .btn {
+  cursor: pointer;
   background-color: lightblue;
   border-color: black;
   border-width: 2px;
+}
+
+p.btn {
+  cursor: pointer;
+  background-color: lightgreen;
+  border-color: black;
+  border-width: 2px;
+  display: inline-block;
+}
+
+#loadJournal {
+  text-align: center;
 }
 
 form {

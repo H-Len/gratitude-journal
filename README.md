@@ -2,7 +2,7 @@
 
 #### _allows user to submit free text journal entries, and submission will affix the current date_
 
-#### By _**Hannah Melendy**
+#### By _**Hannah Melendy**_
 
 ## Description
 

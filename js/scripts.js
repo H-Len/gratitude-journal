@@ -1,3 +1,27 @@
+function Person (firstName, lastName, email) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.email = email;
+}
+
+function MyJournal (journalEntries, author) {
+  this.journalEntries = journalEntries;
+  this.author = author;
+}
+
+function JournalEntry (date, entry) {
+  this.date = date;
+  this.entry = entry;
+}
+
+var author = new Person("bob", "smith", "bsmi@aol.com");
+author.firstName
+
+
+
+
+
+
 $(document).ready(function() {
   // $(p#date).text(function () {
   //   let today = new Date();

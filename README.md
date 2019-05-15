@@ -25,7 +25,7 @@ _User can fill out the boxes and submit each response individually._
 
 ## Specs
 
-_SPECS HAVE YET TO BE COMPLETED WITH FUNCTIONALITY [form, button, date...]_
+_SPECS IN PROGRESS_
 
 | behavior | input | output |
 | --- | ---- | ---- |
@@ -58,7 +58,7 @@ _The following text boxes are present for user to type daily gratitude journal_
 
 ## Known Bugs
 
-_no GitHub repo, nor code ready to go in it. Link above will not work. It's a filler_
+_no 'bugs' but repo still in progress_
 
 ## Support and contact details
 

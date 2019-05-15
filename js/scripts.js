@@ -18,9 +18,9 @@ var author = new Person("bob", "smith", "bsmi@aol.com");
 author.firstName
 
 
-
-
-
+$(function() {
+  $( "#datepicker" ).datepicker();
+});
 
 $(document).ready(function() {
   // $(p#date).text(function () {

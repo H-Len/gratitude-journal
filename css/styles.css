@@ -3,8 +3,26 @@
 }
 
 body {
-  background: url("../img/buddingBackground.jpg");
+  background: url("../img/winter-sunrise.jpg");
+  transform-origin: center;
 }
+
+#datepicker {
+  border-width: 5px;
+  background-color: FFF;
+  margin: 30px;
+}
+
+.notice {
+  border-width: 5px;
+  background-color: FFF;
+  text: FFF;
+}
+
+calSelect {
+  margin: 30px;
+}
+
 
 h1 {
   margin: 5px 5px;
@@ -32,7 +50,7 @@ h1 {
 
 p.btn {
   cursor: pointer;
-  background-color: lightgreen;
+  background-color: lightgrey;
   border-color: black;
   border-width: 2px;
   display: inline-block;

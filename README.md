@@ -54,8 +54,6 @@ _The following text boxes are present for user to type daily gratitude journal_
 
 ## Link to GitHub Pages
 
-* GitHub page has yet to be created!!!!
-
 [link to Gratitude Journal](https://github.com/H-Len/gratitude-journal.git)
 
 ## Known Bugs

@@ -15,7 +15,16 @@ function JournalEntry (date, entry) {
 }
 
 var author = new Person("bob", "smith", "bsmi@aol.com");
-author.firstName
+
+var exclaim = new JournalEntry ("05/15/19", "Blah!");
+
+var journalEntries = [exclaim];
+
+var lethargy = new JournalEntry("051519", "woo...hooo");
+journalEntries = journalEntries.concat(lethargy);
+
+var ummJournal = new MyJournal(journalEntries, author);
+
 
 
 $(function() {

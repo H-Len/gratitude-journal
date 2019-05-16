@@ -19,8 +19,10 @@ body {
   text: FFF;
 }
 
-calSelect {
-  margin: 30px;
+#ui-datepicker-div {
+  background-color: lightyellow;
+  padding: 2px;
+  margin: 2px;
 }
 
 
@@ -94,10 +96,20 @@ body {font-family: Verdana, sans-serif;}
   padding-top: 10px;
 }
 
+.ui-datepicker-prev {
+  background-color: lightpink;
+  margin-right: 2px;
+}
+
 /* Next button */
 .month .next {
   float: right;
   padding-top: 10px;
+}
+
+.ui-datepicker-next {
+  background-color: lightgreen;
+  margin-left: 2px;
 }
 
 /* Weekdays (Mon-Sun) */

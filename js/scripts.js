@@ -7,7 +7,18 @@ function Person (firstName, lastName, email) {
 function MyJournal (journalEntries, author) {
   this.journalEntries = journalEntries;
   this.author = author;
+  //add journal entry to array
+  this.addJEntry = function (newJournalEntry) {
+    if (newJournalEntry instanceof JournalEntry) {
+      this.journalEntries = this.journalEntries.concat(newJournalEntry);
+    } else {
+      throw("Not a valid journal entry.");
+    }
+  }
+
 }
+
+
 
 function JournalEntry (date, entry) {
   this.date = date;

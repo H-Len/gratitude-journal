@@ -71,7 +71,9 @@ $(document).ready(function() {
     var someInput1 = $("input#gratitude-1").val();
     console.log(someInput1);
     event.preventDefault();
+    $('p.question1Answer').append(' ' + someInput1);
   });
+
 
   $("form#greatful-2").submit(function(event) {
     console.log("I'm at a cafe");

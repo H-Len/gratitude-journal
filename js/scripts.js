@@ -56,7 +56,10 @@ $(document).ready(function() {
 
   // find the html element with the id of time
   // set the innerHTML of that element to the date a space the time
-  document.getElementById('time').innerHTML = n + ' ' + time;
+
+  var timeStamp = n + " " + time;
+
+  document.getElementById('time').innerHTML = timeStamp;
 
   $("#loadJournal").click(function(event) {
     console.log("smile");
@@ -64,7 +67,7 @@ $(document).ready(function() {
   });
 
   $("form#greatful-1").submit(function(event) {
-    console.log("I'm here");
+    console.log(timeStamp);
     var someInput1 = $("input#gratitude-1").val();
     console.log(someInput1);
     event.preventDefault();

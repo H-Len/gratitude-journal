@@ -71,7 +71,7 @@ $(document).ready(function() {
     var someInput1 = $("input#gratitude-1").val();
     console.log(someInput1);
     event.preventDefault();
-    $('li.question1Answer').append(timeStamp + " " + someInput1 + '<br>');
+    $('ul#gratefulNotes').append('<li>' + timeStamp + " " + someInput1 + '</li>');
   });
 
 

@@ -152,9 +152,10 @@ body {font-family: Verdana, sans-serif;}
   color: white !important
 }
 
-p.question1Answer {
+li.question1Answer {
   color: brown;
   text-align: center;
   background-color: lightyellow;
   style: bold;
+  display: list-item;
 }

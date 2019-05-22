@@ -71,7 +71,7 @@ $(document).ready(function() {
     var someInput1 = $("input#gratitude-1").val();
     console.log(someInput1);
     event.preventDefault();
-    $('p.question1Answer').append(' ' + someInput1);
+    $('li.question1Answer').append(someInput1 + '<br>');
   });
 
 

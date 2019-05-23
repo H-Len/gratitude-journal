@@ -18,16 +18,16 @@ function MyJournal (journalEntries, author) {
 
 }
 
-
-
 function JournalEntry (date, entry) {
   this.date = date;
   this.entry = entry;
 }
 
+
+
 var author = new Person("bob", "smith", "bsmi@aol.com");
 
-var exclaim = new JournalEntry ("05/15/19", "Blah!");
+var exclaim = new JournalEntry("05/15/19", "Blah!");
 
 var journalEntries = [exclaim];
 
@@ -35,6 +35,23 @@ var lethargy = new JournalEntry("051519", "woo...hooo");
 journalEntries = journalEntries.concat(lethargy);
 
 var ummJournal = new MyJournal(journalEntries, author);
+
+
+//this combines code in a more compact form than lines 28-37; achieves same result
+var aDiffJournal = new MyJournal([new JournalEntry("01.11.1111", "string")], new Person("first", "last", "email"));
+
+aDiffJournal.addJEntry(lethargy);
+aDiffJournal.addJEntry(exclaim);
+aDiffJournal.addJEntry(new JournalEntry("05/22/19", "negativity, remorse, hopelessness"));
+
+
+//method to count the number of journal entries
+MyJournal.prototype.entryCount = function () {
+  return this.journalEntries.length;
+}
+
+
+
 
 
 

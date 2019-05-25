@@ -33,6 +33,9 @@ _SPECS IN PROGRESS_
 | submit entry | click submit | text in box is recorded |
 | date added | click submit | date prepended to daily entry |
 | new entry, same day | submit clicked with new text | concatenate with previous entry, with carriage return between entries. date needn’t be prepended a second time |
+| Save to local storage | submit journal entry | write to local storage |
+| Save to text file | submit journal entry | appear on text file |
+| Save to cookie | submit journal entry | store in cookie |
 | calendar present on page | click on date today or before | see entries for day |
 
 

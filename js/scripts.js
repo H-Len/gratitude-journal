@@ -4,9 +4,11 @@ function Person (firstName, lastName, email) {
   this.email = email;
 }
 
-function MyJournal (journalEntries, author) {
-  this.journalEntries = journalEntries;
+function MyJournal (author) {
+  //journal entries must be an array
+  this.journalEntries = [];
   this.author = author;
+
   //add journal entry to array
   this.addJEntry = function (newJournalEntry) {
     if (newJournalEntry instanceof JournalEntry) {
@@ -15,7 +17,6 @@ function MyJournal (journalEntries, author) {
       throw("Not a valid journal entry.");
     }
   }
-
 }
 
 function JournalEntry (date, entry) {
@@ -34,11 +35,15 @@ var journalEntries = [exclaim];
 var lethargy = new JournalEntry("051519", "woo...hooo");
 journalEntries = journalEntries.concat(lethargy);
 
-var ummJournal = new MyJournal(journalEntries, author);
-
+//without journalEntries parameter, need new method for passing in journal entries
+var ummJournal = new MyJournal(author);
+ummJournal.addJEntry(exclaim);
+ummJournal.addJEntry(lethargy);
 
 //this combines code in a more compact form than lines 28-37; achieves same result
-var aDiffJournal = new MyJournal([new JournalEntry("01.11.1111", "string")], new Person("first", "last", "email"));
+var aDiffJournal = new MyJournal(new Person("first", "last", "email"));
+
+aDiffJournal.addJEntry(new JournalEntry("01.11.1111", "string"));
 
 aDiffJournal.addJEntry(lethargy);
 aDiffJournal.addJEntry(exclaim);
@@ -88,7 +93,7 @@ $(document).ready(function() {
     var someInput1 = $("input#gratitude-1").val();
     console.log(someInput1);
     event.preventDefault();
-    $('ul#gratefulNotes').append('<li>' + timeStamp + " " + someInput1 + '</li>');
+    $('ul#gratefulNotes').append('<li>' + timeStamp + " " + someInput1 + n + '</li>');
   });
 
 

@@ -16,6 +16,13 @@ function MyJournal (author) {
     } else {
       throw("Not a valid journal entry.");
     }
+
+    if (newJournalEntry){
+      // $('#journalEntries').prepend("<li><input id='check' name='check' type='checkbox'/>" + Description + "</li>");
+
+      //Setting input to local storage
+
+    }
   }
 }
 
@@ -55,7 +62,10 @@ MyJournal.prototype.entryCount = function () {
   return this.journalEntries.length;
 }
 
+MyJournal.prototype.addToLocal = function () {
 
+
+};
 
 
 

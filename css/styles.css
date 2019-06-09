@@ -16,6 +16,13 @@ body {
   height: 190px;
 }
 
+#moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 salmon;
+  float: right;
+}
 
 .notice {
   border-width: 5px;
@@ -33,10 +40,10 @@ body {
   background-color: lightgrey;
 }
 
-#ui-datepicker-div {
+/* #ui-datepicker-div {
   background-color: lightyellow;
   margin: 2px;
-}
+} */
 
 
 h1 {

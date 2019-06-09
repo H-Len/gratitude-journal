@@ -1,3 +1,6 @@
+//backend logic
+
+
 function Person (firstName, lastName, email) {
   this.firstName = firstName;
   this.lastName = lastName;
@@ -67,7 +70,12 @@ MyJournal.prototype.addToLocal = function () {
 
 
 
-// 
+
+
+//frontend logic
+
+
+//
 // $(function() {
 //   $("#datepicker").datepicker();
 // });

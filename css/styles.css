@@ -7,11 +7,15 @@ body {
   transform-origin: center;
 }
 
-#datepicker {
-  border-width: 5px;
-  background-color: FFF;
-  margin: 30px;
+
+#selectDate {
+  width: 25%;
+  background-color: lightgrey;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
 }
+
 
 .notice {
   border-width: 5px;
@@ -78,11 +82,11 @@ form {
   margin-bottom: 5px;
 }
 
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+/* ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;} */
 
 /* Month header */
-.month {
+/* .month {
   padding: 70px 25px;
   width: 100%;
   background: #1abc9c;
@@ -90,7 +94,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Month list */
-.month ul {
+/* .month ul {
   margin: 0;
   padding: 0;
 }
@@ -103,31 +107,31 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Previous button inside month header */
-.month .prev {
+/* .month .prev {
   float: left;
   padding-top: 10px;
 }
 
-.ui-datepicker-prev {
+/* .ui-datepicker-prev {
   background-color: lightpink;
   margin-right: 2px;
   cursor: pointer;
-}
-
+/* } */
+/*
 /* Next button */
-.month .next {
+/* .month .next {
   float: right;
   padding-top: 10px;
-}
+} */
 
-.ui-datepicker-next {
+/* .ui-datepicker-next {
   background-color: lightgreen;
   margin-left: 2px;
   cursor: pointer;
-}
+} */
 
 /* Weekdays (Mon-Sun) */
-.weekdays {
+/* .weekdays {
   margin: 0;
   padding: 10px 0;
   background-color:#ddd;
@@ -141,7 +145,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Days (1-31) */
-.days {
+/* .days {
   padding: 10px 0;
   background: #eee;
   margin: 0;
@@ -155,14 +159,14 @@ body {font-family: Verdana, sans-serif;}
   margin-bottom: 5px;
   font-size:12px;
   color: #777;
-}
+} */
 
 /* Highlight the "current" day */
-.days li .active {
+/* .days li .active {
   padding: 5px;
   background: #1abc9c;
   color: white !important
-}
+} */
 
 #gratefulNotes{
   color: brown;

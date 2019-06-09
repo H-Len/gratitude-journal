@@ -31,8 +31,6 @@ function JournalEntry (date, entry) {
   this.entry = entry;
 }
 
-
-
 var author = new Person("bob", "smith", "bsmi@aol.com");
 
 var exclaim = new JournalEntry("05/15/19", "Blah!");
@@ -69,12 +67,16 @@ MyJournal.prototype.addToLocal = function () {
 
 
 
-
-$(function() {
-  $( "#datepicker" ).datepicker();
-});
+// 
+// $(function() {
+//   $("#datepicker").datepicker();
+// });
 
 $(document).ready(function() {
+
+  var selectDate = $("#selectDate").val();
+
+
   // $(p#date).text(function () {
   //   let today = new Date();
   // });

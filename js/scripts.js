@@ -71,7 +71,6 @@ MyJournal.prototype.addToLocal = function () {
 
 
 
-
 //frontend logic
 
 
@@ -79,6 +78,7 @@ MyJournal.prototype.addToLocal = function () {
 // $(function() {
 //   $("#datepicker").datepicker();
 // });
+
 
 $(document).ready(function() {
 
@@ -105,6 +105,8 @@ $(document).ready(function() {
 
   $("#loadJournal").click(function(event) {
     console.log("smile");
+    $(".logIn").hide();
+    $(".openBook").show();
     $("#journal").toggle();
   });
 
@@ -113,7 +115,7 @@ $(document).ready(function() {
     var someInput1 = $("input#gratitude-1").val();
     console.log(someInput1);
     event.preventDefault();
-    $('ul#gratefulNotes').append('<li>' + timeStamp + " " + someInput1 + n + '</li>');
+    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + someInput1 + " -- " + n + '</li>');
   });
 
 

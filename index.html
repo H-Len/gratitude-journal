@@ -21,30 +21,77 @@
       </div>
 
       <h1>Daily Gratitude Journal</h1>
-      <div id='time'></div>
-      <div id="loadJournal">
-        <p class="btn">Open or close new day in journal</p>
+
+      <!-- start signup -->
+      <!-- end signup -->
+
+      <!-- start login section -->
+      <div class="logIn">
+        <form action="action_page.php">
+          <div class="imgcontainer">
+            <img class="paper" src="img/notebook-page.jpg" alt="notebook page" width="20%" class="notebookLeaf">
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
       </div>
-      <div id="journal">
-        <form id="greatful-1">
-          <h3>Gratitude</h3>
-          <label for="gratitude-1">I'm grateful for...:</label>
-          <input id="gratitude-1" type="text">
-          <button type="submit" class="btn">Submit!</button>
-        </form>
-        <form id="greatful-2">
-          <h3>Affirmation</h3>
-          <label for="gratitude-2">Daily affirmation. I am...:</label>
-          <input id="gratitude-2" type="text">
-          <button type="submit" class="btn">Submit!</button>
-        </form>
-        <div>
-          <ul id="gratefulNotes">
-            <li class="question1Answer"></li>
-          </ul>
+      <!-- end login -->
+
+
+
+      <div class="openBook">
+        <div id='time'></div>
+        <div id="loadJournal">
+          <p class="btn">Open or close new day in journal</p>
+        </div>
+        <div id="journal">
+          <form id="greatful-1">
+            <h3>Gratitude</h3>
+            <label for="gratitude-1">I'm grateful for...:</label>
+            <input id="gratitude-1" type="text">
+            <button type="submit" class="btn">Submit!</button>
+          </form>
+          <form id="greatful-2">
+            <h3>Affirmation</h3>
+            <label for="gratitude-2">Daily affirmation. I am...:</label>
+            <input id="gratitude-2" type="text">
+            <button type="submit" class="btn">Submit!</button>
+          </form>
+          <div>
+            <ul id="gratefulNotes">
+              <li class="question1Answer"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+    <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
   </body>
 </html>
 

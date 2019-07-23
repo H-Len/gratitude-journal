@@ -79,6 +79,7 @@ MyJournal.prototype.addToLocal = function () {
 //   $("#datepicker").datepicker();
 // });
 
+
 $(document).ready(function() {
 
   var selectDate = $("#selectDate").val();
@@ -104,6 +105,8 @@ $(document).ready(function() {
 
   $("#loadJournal").click(function(event) {
     console.log("smile");
+    $(".logIn").hide();
+    $(".openBook").show();
     $("#journal").toggle();
   });
 

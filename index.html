@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.4.0.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <meta charset="utf-8">
-    <title>Gratitude Journal</title>
-  </head>
-  <body>
-    <div class="container">
-      <script class="calSelect"></script>
-      <div id="moon"></div>
-      <div class="form-group">
-        <label for="selectDate">Date:</label>
-        <input id="selectDate" class="form-control" type="date">
-      </div>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <meta charset="utf-8">
+  <title>Gratitude Journal</title>
+</head>
+<body>
+  <div class="container">
+    <script class="calSelect"></script>
+    <div id="moon"></div>
+    <div class="form-group">
+      <label for="selectDate">Date:</label>
+      <input id="selectDate" class="form-control" type="date">
+    </div>
 
-      <h1>Daily Gratitude Journal</h1>
+    <h1>Daily Gratitude Journal</h1>
 
-      <!-- start signup -->
-      <!-- end signup -->
+    <!-- start signup -->
+    <!-- end signup -->
 
-      <!-- start login section -->
-      <div class="logIn">
-        <form action="action_page.php">
-          <div class="imgcontainer">
-            <img class="paper" src="img/notebook-page.jpg" alt="notebook page" width="20%" class="notebookLeaf">
-          </div>
+    <!-- start login section -->
+    <div class="logIn">
+      <form action="action_page.php">
+        <div class="imgcontainer">
+          <img class="paper" src="img/notebook-page.jpg" alt="notebook page" width="20%" class="notebookLeaf">
+          <!-- </div>
 
-          <div class="container">
+          <div class="container"> -->
+          <div class="entry">
+
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
             <br>
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <button class="submit" type="submit">Login</button>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
           </div>
 
-          <div class="container" style="background-color:#f1f1f1">
+          <div class="container" style="background-color: silver">
             <button type="button" class="cancelbtn">Cancel</button>
             <span class="psw">Forgot <a href="#">password?</a></span>
           </div>
-        </form>
-      </div>
-      <!-- end login -->
-
-
-
-      <div class="openBook">
-        <div id='time'></div>
-        <div id="loadJournal">
-          <p class="btn">Open or close new day in journal</p>
         </div>
-        <div id="journal">
-          <form id="greatful-1">
-            <h3>Gratitude</h3>
-            <label for="gratitude-1">I'm grateful for...:</label>
-            <input id="gratitude-1" type="text">
-            <button type="submit" class="btn">Submit!</button>
-          </form>
-          <form id="greatful-2">
-            <h3>Affirmation</h3>
-            <label for="gratitude-2">Daily affirmation. I am...:</label>
-            <input id="gratitude-2" type="text">
-            <button type="submit" class="btn">Submit!</button>
-          </form>
-          <div>
-            <ul id="gratefulNotes">
-              <li class="question1Answer"></li>
-            </ul>
-          </div>
+      </form>
+    </div>
+    <!-- end login -->
+
+
+
+    <div class="openBook">
+      <div id='time'></div>
+      <div id="loadJournal">
+        <p class="btn">Open or close new day in journal</p>
+      </div>
+      <div id="journal">
+        <form id="greatful-1">
+          <h3>Gratitude</h3>
+          <label for="gratitude-1">I'm grateful for...:</label>
+          <input id="gratitude-1" type="text">
+          <button type="submit" class="btn">Submit!</button>
+        </form>
+        <form id="greatful-2">
+          <h3>Affirmation</h3>
+          <label for="gratitude-2">Daily affirmation. I am...:</label>
+          <input id="gratitude-2" type="text">
+          <button type="submit" class="btn">Submit!</button>
+        </form>
+        <div>
+          <ul id="gratefulNotes">
+            <li class="question1Answer"></li>
+          </ul>
         </div>
       </div>
     </div>
-    <script>
-// Get the modal
-var modal = document.getElementById('id01');
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-  </body>
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
 </html>
 
- <!-- This program will allow the user to enter a daily musing of gratitude.
-   The goal is one daily.
-        Multiple entries can be added each day.
-        Entries will:
-            have a date attach with submissions
-            be concatinated, with 2 carriage returns between each to separate.
+<!-- This program will allow the user to enter a daily musing of gratitude.
+  The goal is one daily.
+  Multiple entries can be added each day.
+  Entries will:
+  have a date attach with submissions
+  be concatinated, with 2 carriage returns between each to separate.
 
-This app will possably use:
+  This app will possably use:
   a form
   submission button
   storage to record

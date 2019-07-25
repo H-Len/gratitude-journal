@@ -109,16 +109,29 @@ button:hover {
   margin: 24px 0 12px 0;
 }
 
+.entry {
+  float: right;
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+.submit {
+  margin: auto;
+}
+
 /* notebook leaf image */
 img.notebookLeaf {
   width: 15%;
+  float: left;
+  padding: 16px;
+  margin: 16px;
   /* border-radius: 50%; */
 }
 
 /* Add padding to containers */
-.container {
+/* .container {
   padding: 16px;
-}
+} */
 
 /* The "Forgot password" text */
 span.psw {

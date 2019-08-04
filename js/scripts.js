@@ -104,9 +104,12 @@ $(document).ready(function() {
   document.getElementById('time').innerHTML = timeStamp;
 
   $("#loadJournal").click(function(event) {
-    console.log("smile");
-    $(".logIn").hide();
-    $(".openBook").show();
+    event.preventDefault();
+    $(".bookKey").submit(function() {
+      console.log("Aquarius");
+      $(".logIn").hide();
+      $(".openBook").show();
+    });
     $("#journal").toggle();
   });
 

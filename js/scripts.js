@@ -103,13 +103,24 @@ $(document).ready(function() {
 
   document.getElementById('time').innerHTML = timeStamp;
 
+  $(".logIn").click(function() {
+    let userName = "Hannah";
+    let welcomeBanner = "It's good to see you! Welcome back " + userName + ".";
+    $(".bookKey").click(function() {
+      if(userName === "Hannah"){
+        $(".logIn").hide();
+        $(".openBook").show();
+        $("#displayBanner").text(welcomeBanner);
+        $("#displayBanner").show();
+        $("#journal").toggle();
+      }
+      console.log("Aquarius");
+    });
+  });
   $("#loadJournal").click(function(event) {
     event.preventDefault();
-    $(".bookKey").submit(function() {
-      console.log("Aquarius");
-      $(".logIn").hide();
-      $(".openBook").show();
-    });
+    $(".logIn").hide();
+    $(".openBook").show();
     $("#journal").toggle();
   });
 

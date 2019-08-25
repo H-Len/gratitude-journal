@@ -163,6 +163,17 @@ h1 {
   display: none;
 }
 
+#displayBanner {
+  display: none;
+  float: left;
+  text-align: center;
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+  border: dotted 5px darkgrey;
+  background-color: lightyellow;
+}
+
 #time {
   margin: 10px;
   padding: 10px;

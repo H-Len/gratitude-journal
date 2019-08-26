@@ -105,9 +105,10 @@ $(document).ready(function() {
 
   $(".logIn").click(function() {
     let userName = "Hannah";
+    let passWord = "123";
     let welcomeBanner = "It's good to see you! Welcome back " + userName + ".";
     $(".bookKey").click(function() {
-      if(userName === "Hannah"){
+      if(userName === "Hannah" && passWord === "123"){
         $(".logIn").hide();
         $(".openBook").show();
         $("#displayBanner").text(welcomeBanner);
@@ -119,9 +120,10 @@ $(document).ready(function() {
   });
   $("#loadJournal").click(function(event) {
     event.preventDefault();
-    $(".logIn").hide();
-    $(".openBook").show();
-    $("#journal").toggle();
+    // // duplicate:
+    // $(".logIn").hide();
+    // $(".openBook").show();
+    // $("#journal").toggle();
   });
 
   $("form#greatful-1").submit(function(event) {

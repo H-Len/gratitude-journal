@@ -70,7 +70,6 @@ MyJournal.prototype.addToLocal = function () {
 
 
 
-
 //frontend logic
 
 
@@ -104,34 +103,33 @@ $(document).ready(function() {
   document.getElementById('time').innerHTML = timeStamp;
 
   $(".logIn").click(function() {
-    let userName = "Hannah";
+    let userName = $("input[name=uname]").val();
+    console.log(userName);
     let passWord = "123";
-    let welcomeBanner = "It's good to see you! Welcome back " + userName + ".";
     $(".bookKey").click(function() {
-      if(userName === "Hannah" && passWord === "123"){
+      let welcomeBanner = "It's good to see you! Welcome back " + userName + ".";
+      if(passWord === "123"){
         $(".logIn").hide();
-        $(".openBook").show();
-        $("#displayBanner").text(welcomeBanner);
         $("#displayBanner").show();
-        $("#journal").toggle();
+        $("#displayBanner").text(welcomeBanner);
       }
       console.log("Aquarius");
     });
   });
   $("#loadJournal").click(function(event) {
     event.preventDefault();
-    // // duplicate:
-    // $(".logIn").hide();
-    // $(".openBook").show();
-    // $("#journal").toggle();
+    $(".logIn").hide();
+    $(".openBook").show();
+    $("#journal").toggle();
   });
 
   $("form#greatful-1").submit(function(event) {
     console.log(timeStamp);
     var someInput1 = $("input#gratitude-1").val();
-    console.log(someInput1);
+    // console.log(someInput1);
     event.preventDefault();
     $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + someInput1 + " -- " + n + '</li>');
+    localStorage.setItem('value', someInput1);
   });
 
 

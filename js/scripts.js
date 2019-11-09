@@ -153,5 +153,7 @@ $(document).ready(function() {
     var someInput2 = $("input#gratitude-2").val();
     console.log(someInput2);
     event.preventDefault();
+
+    storeInJournal('entry', someInput2);
   });
 });

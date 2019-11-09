@@ -68,6 +68,13 @@ MyJournal.prototype.addToLocal = function () {
 
 };
 
+//localStorage function
+function storeInJournal (item, value) {
+  var myEntries = JSON.parse(localStorage['myEntries']);
+  localStorage.getItem(item, value);
+  myEntries.push(value);
+  localStorage['myEntries'] = JSON.stringify(myEntries);
+}
 
 
 //frontend logic
@@ -80,7 +87,6 @@ MyJournal.prototype.addToLocal = function () {
 
 
 $(document).ready(function() {
-  var myEntries = JSON.parse(localStorage['myEntries']);
   var selectDate = $("#selectDate").val();
 
 
@@ -130,13 +136,13 @@ $(document).ready(function() {
     event.preventDefault();
     $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + someInput1 + " -- " + n + '</li>');
 
-    // a localStorage function will be created in backend at a later time
-    localStorage.getItem('entry', someInput1);
-    // localStorage['myEntries'] = JSON.stringify(['someInput1']);
-    myEntries.push(someInput1);
-    localStorage['myEntries'] = JSON.stringify(myEntries);
+    // // a localStorage function will be created in backend at a later time
+    // localStorage.getItem('entry', someInput1);
+    // // localStorage['myEntries'] = JSON.stringify(['someInput1']);
+    // myEntries.push(someInput1);
+    // localStorage['myEntries'] = JSON.stringify(myEntries);
 
-
+    storeInJournal('entry', someInput1);
 
 
   });

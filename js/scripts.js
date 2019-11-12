@@ -126,17 +126,32 @@ $(document).ready(function() {
     $(".logIn").hide();
     $(".openBook").show(function() {
       var myEntries = JSON.parse(localStorage['myEntries']);
-      $('ul#gratefulNotes').append('<li>'+myEntries+'/<li>');
+      console.log(typeof myEntries);
+      var entryList = String(myEntries);
+      console.log(typeof entryList);
+      let entryItem = entryList.split(',');
+      console.log(entryItem);
+      for(i=0; i < entryItem.length; i++) {
+        $('.prevSubmissions').append('<li>' + entryItem[i] + '</li>');
+      }
     });
+
+
+      // entries.toArray();
+      // console.log(entries.length);
+      // for (i=0, i < entryList.length, i++) {
+      //   console.log(entryList[i]);
+      // }
+
     $("#journal").toggle();
   });
 
-  $("form#greatful-1").submit(function(event) {
+  $("form#grateful-1").submit(function(event) {
     console.log(timeStamp);
     var someInput1 = $("input#gratitude-1").val();
     // console.log(someInput1);
     event.preventDefault();
-    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + "I am greatful for " + someInput1 + " -- " + n + '</li>');
+    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + "I am grateful for " + someInput1 + " -- " + n + '</li>');
 
     // // a localStorage function will be created in backend at a later time
     // localStorage.getItem('entry', someInput1);
@@ -150,7 +165,7 @@ $(document).ready(function() {
   });
 
 
-  $("form#greatful-2").submit(function(event) {
+  $("form#grateful-2").submit(function(event) {
     console.log("I'm at a cafe");
     var someInput2 = $("input#gratitude-2").val();
     console.log(someInput2);

@@ -134,7 +134,7 @@ $(document).ready(function() {
     var someInput1 = $("input#gratitude-1").val();
     // console.log(someInput1);
     event.preventDefault();
-    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + someInput1 + " -- " + n + '</li>');
+    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + "I am greatful for " + someInput1 + " -- " + n + '</li>');
 
     // // a localStorage function will be created in backend at a later time
     // localStorage.getItem('entry', someInput1);
@@ -153,7 +153,7 @@ $(document).ready(function() {
     var someInput2 = $("input#gratitude-2").val();
     console.log(someInput2);
     event.preventDefault();
-    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + someInput2 + " -- " + n + '</li>');
+    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + "I am " + someInput2 + " -- " + n + '</li>');
 
     storeInJournal('entry', someInput2);
   });

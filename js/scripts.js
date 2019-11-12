@@ -89,7 +89,6 @@ function storeInJournal (item, value) {
 $(document).ready(function() {
   var selectDate = $("#selectDate").val();
 
-
   // $(p#date).text(function () {
   //   let today = new Date();
   // });
@@ -125,7 +124,10 @@ $(document).ready(function() {
   $("#loadJournal").click(function(event) {
     event.preventDefault();
     $(".logIn").hide();
-    $(".openBook").show();
+    $(".openBook").show(function() {
+      var myEntries = JSON.parse(localStorage['myEntries']);
+      $('ul#gratefulNotes').append('<li>'+myEntries+'/<li>');
+    });
     $("#journal").toggle();
   });
 

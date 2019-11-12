@@ -71,7 +71,7 @@ MyJournal.prototype.addToLocal = function () {
 //localStorage function
 function storeInJournal (item, value) {
   var myEntries = JSON.parse(localStorage['myEntries']);
-  localStorage.getItem(item, value);
+  localStorage.getItem(selectDate, item, value);
   myEntries.push(value);
   localStorage['myEntries'] = JSON.stringify(myEntries);
 }
@@ -153,6 +153,7 @@ $(document).ready(function() {
     var someInput2 = $("input#gratitude-2").val();
     console.log(someInput2);
     event.preventDefault();
+    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + someInput2 + " -- " + n + '</li>');
 
     storeInJournal('entry', someInput2);
   });

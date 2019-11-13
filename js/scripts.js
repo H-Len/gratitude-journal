@@ -68,6 +68,13 @@ MyJournal.prototype.addToLocal = function () {
 
 };
 
+//localStorage function
+function storeInJournal (item, value) {
+  var myEntries = JSON.parse(localStorage['myEntries']);
+  localStorage.getItem(selectDate, item, value);
+  myEntries.push(value);
+  localStorage['myEntries'] = JSON.stringify(myEntries);
+}
 
 
 //frontend logic
@@ -80,9 +87,7 @@ MyJournal.prototype.addToLocal = function () {
 
 
 $(document).ready(function() {
-
   var selectDate = $("#selectDate").val();
-
 
   // $(p#date).text(function () {
   //   let today = new Date();
@@ -119,24 +124,54 @@ $(document).ready(function() {
   $("#loadJournal").click(function(event) {
     event.preventDefault();
     $(".logIn").hide();
-    $(".openBook").show();
+    $(".openBook").show(function() {
+      var myEntries = JSON.parse(localStorage['myEntries']);
+      console.log(typeof myEntries);
+      var entryList = String(myEntries);
+      console.log(typeof entryList);
+      let entryItem = entryList.split(',');
+      console.log(entryItem);
+      for(i=0; i < entryItem.length; i++) {
+        $('.prevSubmissions').append('<li>' + entryItem[i] + '</li>');
+      }
+    });
+
+
+      // entries.toArray();
+      // console.log(entries.length);
+      // for (i=0, i < entryList.length, i++) {
+      //   console.log(entryList[i]);
+      // }
+
     $("#journal").toggle();
   });
 
-  $("form#greatful-1").submit(function(event) {
+  $("form#grateful-1").submit(function(event) {
     console.log(timeStamp);
     var someInput1 = $("input#gratitude-1").val();
     // console.log(someInput1);
     event.preventDefault();
-    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + someInput1 + " -- " + n + '</li>');
-    localStorage.setItem('value', someInput1);
+    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + "I am grateful for " + someInput1 + " -- " + n + '</li>');
+
+    // // a localStorage function will be created in backend at a later time
+    // localStorage.getItem('entry', someInput1);
+    // // localStorage['myEntries'] = JSON.stringify(['someInput1']);
+    // myEntries.push(someInput1);
+    // localStorage['myEntries'] = JSON.stringify(myEntries);
+
+    storeInJournal('entry', someInput1);
+
+
   });
 
 
-  $("form#greatful-2").submit(function(event) {
+  $("form#grateful-2").submit(function(event) {
     console.log("I'm at a cafe");
     var someInput2 = $("input#gratitude-2").val();
     console.log(someInput2);
     event.preventDefault();
+    $('ul#gratefulNotes').append('<li>'/*timeStamp*/ + "  " + "I am " + someInput2 + " -- " + n + '</li>');
+
+    storeInJournal('entry', someInput2);
   });
 });

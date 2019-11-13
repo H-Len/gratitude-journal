@@ -360,3 +360,7 @@ li.question1Answer {
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+
+.prevSubmissions {
+  text-align: left;
+}

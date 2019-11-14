@@ -148,6 +148,8 @@ $(document).ready(function() {
 
   $("form#grateful-1").submit(function(event) {
     console.log(timeStamp);
+    var remove_button   = $(".remove_field_button");
+    var wrapper         = $(".input_fields_wrap");
     var someInput1 = $("input#gratitude-1").val();
     // console.log(someInput1);
     event.preventDefault();
@@ -160,7 +162,13 @@ $(document).ready(function() {
     // localStorage['myEntries'] = JSON.stringify(myEntries);
 
     storeInJournal('entry', someInput1);
-
+    $(remove_button).click(function(e){
+        e.preventDefault();
+        var total_fields = wrapper[0].childNodes.length;
+        if(total_fields>1){
+            wrapper[0].childNodes[total_fields-1].remove();
+        }
+    });
 
   });
 

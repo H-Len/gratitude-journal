@@ -1,3 +1,23 @@
+var from = 0, step = 5;
+
+function showNext(list) {
+  list
+  .find('li').hide().end()
+  .find('li:lt(' + (from + step) + '):not(li:lt(' + from + '))')
+  .show();
+  from += step;
+}
+
+function showPrevious(list) {
+  from -= step;
+  list
+  .find('li').hide().end()
+  .find('li:lt(' + from + '):not(li:lt(' + (from - step) + '))')
+  .show();
+}
+
+
+
 $(document).ready(function() {
   $(".prevSubmissions").append(function() {
     var myEntries = JSON.parse(localStorage['myEntries']);
@@ -11,31 +31,21 @@ $(document).ready(function() {
     }
   });
 
-  var from = 0, step = 6;
-
-  function showNext(list) {
-    list
-      .find('li').hide().end()
-      .find('li:lt(' + (from + step) + '):not(li:lt(' + from + '))')
-        .show();
-    from += step;
-  }
-
-  function showPrevious(list) {
-    from -= step;
-    list
-      .find('li').hide().end()
-      .find('li:lt(' + from + '):not(li:lt(' + (from - step) + '))')
-        .show();
-  }
-
   // show initial set
-  showNext($('ul'));
+  showNext($('li'));
 
   // clicking on the 'more' link:
   $('#more').click(function(e) {
     e.preventDefault();
-    showNext($('ul'));
+    showNext($('li'));
+  });
+
+  showPrevious($('li'));
+
+  // clicking on the 'previous' link:
+  $('#previous').click(function(e) {
+    e.preventDefault();
+    showPrevious($('li'));
   });
 
 });

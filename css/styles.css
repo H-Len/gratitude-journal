@@ -301,8 +301,8 @@ body {font-family: Verdana, sans-serif;} */
   display: list-item;
 }
 
-li.question1Answer {
-}
+/* li.question1Answer {
+} */
 
 /* The Modal (background) */
 .modal {
@@ -363,5 +363,26 @@ li.question1Answer {
 
 .prevSubmissions {
   text-align: left;
-  width: 50%;
+  /* width: 40%; */
+  /* flex: auto; */
+  /* text-decoration: underline; */
+  border: blue 5px;
+}
+
+
+.todaySubmission {
+  border: red 5px;
+  /* text-align: right;
+  width: 40%;
+  flex: auto   ; */
+}
+
+.journalBook {
+  border-radius: 50%;
+  text-decoration: underline;
+  border: solid black 4px;
+  background-color: lightgrey;
+  /* float: right; */
+  text-align: center;
+  padding: 10px;
 }

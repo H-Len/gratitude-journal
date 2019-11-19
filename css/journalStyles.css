@@ -1,3 +1,12 @@
+body {
+  background: lightgrey;
+}
+
+h1 {
+  background-color: lightblue;
+  border: dotted black 4px;
+}
+
 #more {
   background-color: lightblue;
   border: solid black 2px;

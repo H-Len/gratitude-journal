@@ -10,4 +10,32 @@ $(document).ready(function() {
       $('.prevSubmissions').append('<li>' + entryItem[i] + '</li>');
     }
   });
+
+  var from = 0, step = 6;
+
+  function showNext(list) {
+    list
+      .find('li').hide().end()
+      .find('li:lt(' + (from + step) + '):not(li:lt(' + from + '))')
+        .show();
+    from += step;
+  }
+
+  function showPrevious(list) {
+    from -= step;
+    list
+      .find('li').hide().end()
+      .find('li:lt(' + from + '):not(li:lt(' + (from - step) + '))')
+        .show();
+  }
+
+  // show initial set
+  showNext($('ul'));
+
+  // clicking on the 'more' link:
+  $('#more').click(function(e) {
+    e.preventDefault();
+    showNext($('ul'));
+  });
+
 });

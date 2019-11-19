@@ -11,7 +11,7 @@ $(document).ready(function() {
     }
   });
 
-  var from = 0, step = 6;
+  var from = 0, step = 5;
 
   function showNext(list) {
     list
@@ -30,12 +30,12 @@ $(document).ready(function() {
   }
 
   // show initial set
-  showNext($('ul'));
+  showNext($('li'));
 
   // clicking on the 'more' link:
   $('#more').click(function(e) {
     e.preventDefault();
-    showNext($('ul'));
+    showNext($('li'));
   });
 
 });

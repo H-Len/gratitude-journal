@@ -35,7 +35,7 @@ $(document).ready(function() {
   showNext($('li'));
 
   // clicking on the 'more' link:
-  $('#more').click(function(e) {
+  $('#next').click(function(e) {
     e.preventDefault();
     showNext($('li'));
   });

@@ -38,14 +38,14 @@ $(document).ready(function() {
 
   $("#mybook").append(function() {
     var myEntries = JSON.parse(localStorage['myEntries']);
-    console.log(typeof myEntries);
+    // console.log(typeof myEntries);
     var entryList = String(myEntries);
-    console.log(typeof entryList);
+    // console.log(typeof entryList);
     let entryItem = entryList.split(',');
-    console.log(entryItem);
+    // console.log(entryItem);
     let pages = '<div> <ul>';
     const lperPage = 10;
-    for(i=0; i < entryItem.length; i++) {
+    for(i = 0; i < entryItem.length; i++) {
       pages += '<li>' + entryItem[i] + '</li>';
       if(i > 0 && i % 9 === 0) {
         pages += '</ul></div><div><ul>'
@@ -59,4 +59,5 @@ $(document).ready(function() {
     return pages;
   });
   $('#mybook').booklet()
+
 });

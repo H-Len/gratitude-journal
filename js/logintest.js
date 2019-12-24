@@ -5,19 +5,34 @@ $(document).ready(function() {
   //create click handler
   $("#loginButton").click(function() {
     console.log('button clicked');
-    // document.cookie = "pie=pumpkin; SameSite=Strict";
     localStorage.setItem('pie', 'cranberry');
+    $("#loginButton").hide();
+    $("#logoutButton").show();
+
   });
 
   $('#logoutButton').click(function() {
     console.log('goodbye');
     console.log(localStorage.getItem('pie'));
     localStorage.removeItem('pie');
-  })
+    $("#logoutButton").hide();
+    $("#loginButton").show();
+
+  });
 
 
   //logged in?
-  //get cookie and check if it's a valid login
-  //if not valid login, login form remains on screen
-  //if answer is valid, hide login and show main page/app
+  //get localStorage and check if it's a valid login
+    let password = localStorage.getItem('pie');
+    console.log(password);
+    if(password === 'cranberry') {
+      //if answer is valid, hide login and show main page/app
+      $("#loginButton").hide();
+
+    } else {
+      //if not valid login, login form remains on screen
+      $("#logoutButton").hide();
+
+    }
+
 });
